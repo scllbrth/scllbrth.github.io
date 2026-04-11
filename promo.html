@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>好消息 goodtidings crochet</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <h3><a href="./index.html">好消息 goodtidings</a></h3>
+                <ul class="nav-menu">
+                    <li><a href="#">promo</a></li>
+                    <li><a href="#">免費織圖</a></li>
+                    <li><a href="#">娃娃織圖</a></li>
+                    <li><a href="#">包袋及服飾織圖</a></li>
+                    <li><a href="#">登入/註冊</a></li>
+                    <li><a href="javascript:;"><i class="bi bi-cart4" id="cart"></i></li></a> <!-- change later -->
+                    <!-- prevent default: use javascript:; (more pro, wont show on address bar) or #:; -->
+                </ul>
+            </nav>
+
+            <section class="hero">
+
+            </section>
+        </header>
+
+        <main id="main-promo">
+            <section class="side-menu">
+                <ul>
+                    <li><a href="">春季特價</a></li>
+                    <li><a href="">免費織圖</a></li>
+                    <li><a href="">娃娃織圖</a></li>
+                    <li><a href="">包袋及服飾織圖</a></li>
+                </ul>
+            </section>
+
+            <section class="products">
+                <div class="products-row">
+                    <div class="products-row-info">
+                        <h2 class="products-row-title">春季特價</h2>
+                        <!-- sort product -->
+                    </div>
+                    <div class="products-row-items">
+
+                        <template id="template">
+                            <div class="products-row-item">
+                                <a href="javascript:;"><img src="" alt=""></a>
+                                <div class="products-row-item-texts">
+                                    <div class="products-row-item-title">
+                                        <span class="item-name"></span>
+                                        <span class="item-price"></span>
+                                    </div>
+                                    <button class="buy">加入購物車</button>
+                                </div>
+                            </div>
+                        </template>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <div id="buy-modal">
+
+            </div>
+
+            <section class="cart closed"> <!-- style="display: none;" -->
+                <h2 class="cart-title">您的購物車</h2>
+
+                <template id="cart-template">
+                    <div class="cart-item">
+                        <img src="./images/1.jpg" alt="">
+                        <div class="cart-details">
+                            <p class="cart-name">Adjustable Standing Desk</p>
+                            <p class="cart-price">NTD 250</p>
+                        </div>
+                        <div class="cart-qty">
+                            <button class="btn-add">+</button>
+                            <span class="cart-qty-text">1</span>
+                            <button class="btn-sub">-</button>
+                        </div>
+                    </div>
+                </template>
+
+                <div class="cart-item">
+                    <img src="./images/1.jpg" alt="">
+                    <div class="cart-details">
+                        <p class="cart-name">Adjustable Standing Desk</p>
+                        <p class="cart-price">NTD 250</p>
+                    </div>
+                    <div class="cart-qty">
+                        <button class="btn-add">+</button>
+                        <span class="cart-qty-text">1</span>
+                        <button class="btn-sub">-</button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <img src="./images/1.jpg" alt="">
+                    <div class="cart-details">
+                        <p class="cart-name">Adjustable Standing Desk</p>
+                        <p class="cart-price">NTD 250</p>
+                    </div>
+                    <div class="cart-qty">
+                        <button class="btn-add">+</button>
+                        <span class="cart-qty-text">1</span>
+                        <button class="btn-sub">-</button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+
+        </footer>
+
+
+
+        <script src="./js/script.js"></script>
+        <script src="./js/promo.js"></script>
+    </div>
+</body>
+
+</html>

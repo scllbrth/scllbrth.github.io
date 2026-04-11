@@ -1,0 +1,31 @@
+nav {
+    height: var(--nav-height);
+    background-color: var(--color-main);
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    box-shadow: 0 5px 10px var(--color-black);
+
+    & .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        & li {
+            /* display: block; */
+            line-height: calc(var(--nav-height) - 16px);
+            padding: 0.5rem;
+            
+            &:hover {
+                background-color: rgb(from var(--color-white) r g b / .5);
+            }
+        }
+    }
+}

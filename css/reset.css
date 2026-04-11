@@ -1,0 +1,35 @@
+.dropdown-menu {
+    border-radius: 0;
+    border-top: 5px solid var(--color-pink-500);
+}
+.dropdown-item:hover {
+    background-color: var(--color-purple-500);
+    color: #fff;
+}
+.nav-link:hover{
+    color: var(--color-pink-500);
+}
+.nav-link.dropdown-toggle::after {
+   color: var(--color-pink-500);
+}
+.navbar-toggler{
+    border: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-black);
+}
