@@ -1,9 +1,10 @@
 .hero {
     min-height:
         /* calc(100vh - var(--nav-height)); */
-        80vh;
+        /* 80vh; */
+        calc(80vh - var(--nav-height));
     background-color: var(--color-main);
-    background-image: url(../images/crochet-header2.jpg);
+    background-image: url(../images/crochet-header3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

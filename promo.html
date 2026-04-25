@@ -20,7 +20,7 @@
             <nav>
                 <h3><a href="./index.html">好消息 goodtidings</a></h3>
                 <ul class="nav-menu">
-                    <li><a href="#">promo</a></li>
+                    <li><a href="#">春季特價</a></li>
                     <li><a href="#">免費織圖</a></li>
                     <li><a href="#">娃娃織圖</a></li>
                     <li><a href="#">包袋及服飾織圖</a></li>
@@ -29,10 +29,6 @@
                     <!-- prevent default: use javascript:; (more pro, wont show on address bar) or #:; -->
                 </ul>
             </nav>
-
-            <section class="hero">
-
-            </section>
         </header>
 
         <main id="main-promo">
@@ -61,7 +57,7 @@
                                         <span class="item-name"></span>
                                         <span class="item-price"></span>
                                     </div>
-                                    <button class="buy">加入購物車</button>
+                                    <button class="buy" data-id="">加入購物車</button>
                                 </div>
                             </div>
                         </template>
@@ -78,8 +74,10 @@
             <section class="cart closed"> <!-- style="display: none;" -->
                 <h2 class="cart-title">您的購物車</h2>
 
+                <div class="cart-items"></div>
+
                 <template id="cart-template">
-                    <div class="cart-item">
+                    <div class="cart-item" data-id="">
                         <img src="./images/1.jpg" alt="">
                         <div class="cart-details">
                             <p class="cart-name">Adjustable Standing Desk</p>
@@ -93,7 +91,7 @@
                     </div>
                 </template>
 
-                <div class="cart-item">
+                <!-- <div class="cart-item">
                     <img src="./images/1.jpg" alt="">
                     <div class="cart-details">
                         <p class="cart-name">Adjustable Standing Desk</p>
@@ -117,7 +115,7 @@
                         <span class="cart-qty-text">1</span>
                         <button class="btn-sub">-</button>
                     </div>
-                </div>
+                </div> -->
 
             </section>
         </main>
@@ -128,8 +126,8 @@
 
 
 
-        <script src="./js/script.js"></script>
-        <script src="./js/promo.js"></script>
+        <script type="module" src="./js/script.js"></script>
+        <script type="module" src="./js/promo.js"></script>
     </div>
 </body>
 

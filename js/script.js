@@ -15,13 +15,8 @@ cartBtn.addEventListener("click", () => {
     cart.classList.toggle("closed");
 })
 
-// buyBtn.addEventListener('click', (e) => {
-//     // buyModal.classList.toggle('show');
-
-//     // e.preventDefault();
-
-//     const id = this.closest('.products-row-item').id;
-
-//     console.log(id);
-//     // addToCart(id);
-// });
+// window.addEventListener('click', e => {
+//     if (!cart.contains(e.target) && !cart.classList.contains('closed')) {
+//         cart.classList.add('closed');
+//     }
+// })
