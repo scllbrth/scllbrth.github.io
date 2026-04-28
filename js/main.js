@@ -1,14 +1,11 @@
+import { addToCart, initCart } from "./cart-logic.js";
+
+initCart();
+
 const cartBtn = document.querySelector("#cart");
 const cart = document.querySelector(".cart");
-const buyBtn = document.querySelector('.buy');
+const buyBtns = document.querySelectorAll('.buy');
 const buyModal = document.querySelector('#buy-modal');
-
-// const addToCart = (id) => {
-    
-    
-// }
-
-
 
 
 cartBtn.addEventListener("click", () => {
