@@ -6,7 +6,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 700;
+  font-weight: 600;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,6 +33,13 @@ nav {
           line-height: var(--nav-height);
         }
       }
+    }
+
+    @media (max-width: 768px) {
+      /* &:not(:last-child) {
+        display: none;
+      } */
+      display: none;
     }
   }
 }

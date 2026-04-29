@@ -4,35 +4,55 @@
 }
 
 .side-menu {
-  background-color: rgb(from var(--color-grey) r g b / 0.15);
-  /* flex-grow: 0; */
   height: auto;
   max-width: 20vw;
   margin: 4rem auto;
-  padding: 1rem;
-  border-radius: 0.5rem;
 
-  & ul {
+  .filter-header {
     display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
-  }
-
-  & li {
-    background-color: var(--color-white);
+    justify-content: space-between;
+    cursor: pointer;
     padding: 1rem;
-
-    & a {
-      font-weight: 800;
-      opacity: 0.9;
-    }
+    background: #fff;
+    border: 1px solid #eee;
+    font-weight: 600;
 
     &:hover {
-      background-color: var(--color-grey);
-      & a {
+      background-color: var(--color-main-400);
+      /* & span {
         color: var(--color-white);
-        opacity: 1;
+      } */
+    }
+  }
+
+  .filter-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+    overflow: hidden;
+  }
+
+  .filter-container.active .filter-content {
+    grid-template-rows: 1fr;
+  }
+
+  .content-inner {
+    min-height: 0; /* Required for the grid trick to work */
+    padding: 0.5rem;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+
+    & label {
+      padding: 0.5rem;
+
+      &:hover {
+        background-color: #fff;
       }
+    }
+
+    & input[type="checkbox"] {
+      margin-right: 0.5rem;
     }
   }
 }
@@ -46,11 +66,12 @@
   flex-direction: column;
   background-color: var(--color-white);
   width: 40vw;
-  height: 100vh;
+  height: calc(100dvh - var(--nav-height));
   position: fixed;
   top: 80px;
   right: 0;
   padding: 20px;
+  overflow: auto;
 
   transition: all 0.2s;
 
@@ -60,12 +81,12 @@
 
     & .cart-title {
       font-size: 1.5rem;
-      font-weight: 800;
+      font-weight: 600;
     }
 
     & button {
-        width: auto;
-        padding: 0 1rem;
+      width: auto;
+      padding: 0 1rem;
     }
   }
 
@@ -105,7 +126,7 @@
 
     & .cart-price {
       font-size: 1.5rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--color-red);
     }
   }
@@ -119,13 +140,13 @@
     & button {
       padding: 0 1rem;
       /* font-size: 1.5rem; */
-      font-weight: 800;
+      font-weight: 600;
       height: var(--line-height);
     }
 
     & span {
       text-align: center;
-      font-weight: 700;
+      font-weight: 600;
       /* font-size: 1.5rem; */
       margin: 1rem;
     }
@@ -139,7 +160,7 @@
     margin-bottom: 0.5rem;
 
     & span {
-      font-weight: 800;
+      font-weight: 600;
       color: var(--color-red);
       font-size: 1.5rem;
     }
@@ -153,5 +174,28 @@ button {
   border-radius: 0.5rem;
   border: none;
   background-color: var(--color-main-500);
-  font-weight: bold;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80dvw;
+    height: 100%;
+    background: var(--color-white);
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    padding: 1rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .side-menu.open {
+    right: 0;
+  }
+
+  .filter-toggle {
+    display: block;
+  }
 }
