@@ -1,5 +1,5 @@
-[{"id":1,"name":"Stuffed Bell Peppers","img":"free/1","price":0,"hook":"3.0mm","yarn":"acrylic","technique":"single"},
-{"id":2,"name":"Stainless Steel Water Pitcher","img":"free/2","price":0,"hook":"4.0mm","yarn":"wool","technique":"magic"},
-{"id":3,"name":"Garden Hose Reel","img":"free/3","price":0,"hook":"3.0mm","yarn":"cotton","technique":"single"},
-{"id":4,"name":"Himalayan Pink Salt","img":"free/4","price":0,"hook":"4.0mm","yarn":"wool","technique":"magic"},
-{"id":5,"name":"Cocktail Shaker Set","img":"free/5","price":0,"hook":"4.0mm","yarn":"acrylic","technique":"magic"}]
+[{"id":1,"name":"Stuffed Bell Peppers","img":"free/1","price":0,"hook":"3.0mm","yarn":"acrylic","technique":"single","desc":"適合發揮想像力的互動式廚房玩具組。"},
+{"id":2,"name":"Stainless Steel Water Pitcher","img":"free/2","price":0,"hook":"4.0mm","yarn":"wool","technique":"magic","desc":"便攜式營火坑，適合後院聚會。"},
+{"id":3,"name":"Garden Hose Reel","img":"free/3","price":0,"hook":"3.0mm","yarn":"cotton","technique":"single","desc":"採用全穀物與蜂蜜製成的經典麥片。"},
+{"id":4,"name":"Himalayan Pink Salt","img":"free/4","price":0,"hook":"4.0mm","yarn":"wool","technique":"magic","desc":"專為狗狗設計的耐用柔軟飛盤。"},
+{"id":5,"name":"Cocktail Shaker Set","img":"free/5","price":0,"hook":"4.0mm","yarn":"acrylic","technique":"magic","desc":"以韭蔥和馬鈴薯烹製的鹹味湯品。"}]

@@ -15,6 +15,19 @@
   --color-white: #f3f3f3;
   --color-grey: #888888;
   --color-red: #e21818;
+  
+  --ratio: 1.25;
+  --p: 1rem;
+  --h6: calc(var(--p) * var(--ratio));
+  --h5: calc(var(--h6) * var(--ratio));
+  --h4: calc(var(--h5) * var(--ratio));
+  --h3: calc(var(--h4) * var(--ratio));
+  --h2: calc(var(--h3) * var(--ratio));
+  --h1: calc(var(--h2) * var(--ratio));
+
+  @media (max-width: 768px) {
+    --ratio: 1.125;
+  }
 }
 
 body {
@@ -47,9 +60,13 @@ section {
   width: 100%;
 }
 
-h2 {
-  font-size: 24px;
-}
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+h3 { font-size: var(--h3); }
+h4 { font-size: var(--h4); }
+h5 { font-size: var(--h5); }
+h6 { font-size: var(--h6); }
+p { font-size: var(--p); }
 
 input,
 button,
@@ -70,12 +87,21 @@ select {
     justify-content: space-between;
 
     & .products-row-title {
+      font-size: var(--h4);
       font-weight: 600;
     }
 
     & button {
       width: auto;
       padding: 0 1rem;
+    }
+
+    & .filter-toggle {
+      display: none;
+
+      @media (max-width: 576px) {
+        display: block;
+      }
     }
 
     & a {
@@ -104,21 +130,23 @@ select {
       flex-direction: column;
       gap: 0.5rem;
       justify-content: space-between;
-      /* margin: 0.5rem; */
-      /* border: 1px solid red; */
       border-radius: 1rem;
       background-color: #fff;
       overflow: hidden;
 
       & .products-row-item-top {
+        a:has(img) {
+          display: block;
+          overflow: hidden;
+        }
+
         & img {
-          /* border-radius: 1rem 1rem 0 0; */
-          /* border: 1px solid red; */
           width: 100%;
-          /* height: auto; */
+          display: block;
           aspect-ratio: 1/1;
           object-fit: cover;
           display: block;
+          transition: transform 0.3s ease;
         }
 
         .products-row-item-texts {
@@ -129,6 +157,10 @@ select {
           display: flex;
           justify-content: space-between;
           gap: 0.5rem;
+
+          @media (max-width: 675px) {
+            flex-direction: column;
+          }
 
           & .item-price {
             color: var(--color-red);
@@ -146,6 +178,48 @@ select {
         margin: 0 auto 0.5rem;
         width: calc(100% - 1rem);
       }
+
+      &:hover {
+        .products-row-item-top img {
+          transform: scale(1.1);
+        }
+      }
     }
+  }
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--color-main-500);
+  font-weight: 600;
+  line-height: 2;
+
+  &:active {
+    background-color: var(--color-main-700);
+  }
+
+  @media (max-width: 576px) {
+    line-height: 1.5;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
   }
 }

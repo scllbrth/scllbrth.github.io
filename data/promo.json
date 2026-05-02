@@ -1,5 +1,5 @@
-[{"id":1,"name":"Adjustable Standing Desk","img":"promo/1","price":320,"hook":"2.0mm","yarn":"cotton","technique":"chain"},
-{"id":2,"name":"Lemon Herb Grilled Chicken","img":"promo/2","price":10,"hook":"3.0mm","yarn":"acrylic","technique":"single"},
-{"id":3,"name":"Sun-Dried Tomato Pesto","img":"promo/3","price":50,"hook":"4.0mm","yarn":"wool","technique":"magic"},
-{"id":4,"name":"Summer Tank Dress","img":"promo/4","price":40,"hook":"3.0mm","yarn":"cotton","technique":"single"},
-{"id":5,"name":"Portable Phone Mug Holder","img":"promo/5","price":15,"hook":"4.0mm","yarn":"acrylic","technique":"magic"}]
+[{"id":1,"name":"Adjustable Standing Desk","img":"promo/1","price":320,"hook":"2.0mm","yarn":"cotton","technique":"chain","desc":"一款以日曬番茄和松子製成的濃郁青醬。"},
+{"id":2,"name":"Lemon Herb Grilled Chicken","img":"promo/2","price":10,"hook":"3.0mm","yarn":"acrylic","technique":"single","desc":"輕便耐用的吊床，讓您在大自然中放鬆身心。"},
+{"id":3,"name":"Sun-Dried Tomato Pesto","img":"promo/3","price":50,"hook":"4.0mm","yarn":"wool","technique":"magic","desc":"搭配泰式辣醬的即食麵，方便快速用餐。"},
+{"id":4,"name":"Summer Tank Dress","img":"promo/4","price":40,"hook":"3.0mm","yarn":"cotton","technique":"single","desc":"採用全穀物與蜂蜜製成的經典麥片。"},
+{"id":5,"name":"Portable Phone Mug Holder","img":"promo/5","price":15,"hook":"4.0mm","yarn":"acrylic","technique":"magic","desc":"酸甜果醬，塗抹於吐司或用於甜點皆宜。"}]

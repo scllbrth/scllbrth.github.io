@@ -7,11 +7,11 @@ main {
     margin-left: auto;
   }
   /* 小螢幕 (超小設備, < 576px) */
-  /* @media (max-width: 575.98px) {
+  @media (max-width: 575.98px) {
     main {
-      max-width: 100%;
+      max-width: 100dvw;
     }
-  } */
+  }
   /* 中小螢幕 (小型設備, >= 576px) */
   /* @media (min-width: 576px) {
     main {

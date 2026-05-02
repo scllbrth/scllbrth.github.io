@@ -1,117 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/components.css">
-    <link rel="stylesheet" href="./css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <title>好消息 goodtidings crochet</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <nav>
-                <h3><a href="./index.html">好消息 goodtidings</a></h3>
-                <ul class="nav-menu">
-                    <li><a href="./promo.html">春季特價</a></li>
-                    <li><a href="#">免費織圖</a></li>
-                    <li><a href="#">娃娃織圖</a></li>
-                    <li><a href="#">包袋及服飾織圖</a></li>
-                    <li><a href="#">登入/註冊</a></li>
-                    <li><a href="javascript:;"><i class="bi bi-cart4" id="cart" aria-label="cart"></i></a></li> <!-- change later -->
-                    <!-- prevent default: use javascript:; (more pro, wont show on address bar) or #:; -->
-                </ul>
-            </nav>
+      <header>
+        <nav>
+          <h3><a href="./index.html">好消息 goodtidings</a></h3>
+          <div class="nav-menu">
+            <ul class="nav-links">
+              <li><a href="./promo.html">春季特價</a></li>
+              <li><a href="./free.html">免費織圖</a></li>
+              <li><a href="./amigurumi.html">娃娃織圖</a></li>
+              <li><a href="./bag.html">包袋及服飾織圖</a></li>
+              <li><a href="./login.html" id="login">登入/註冊</a></li>
+            </ul>
+            <ul class="nav-icons">
+              <li>
+                <a href="javascript:;" id="cart">
+                  <i class="bi bi-cart4" aria-label="cart"></i>
+                  <span class="cart-badge">0</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;" id="hamburger">
+                  <i class="bi bi-list"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-            <section class="hero">
+        <section class="hero"></section>
+      </header>
 
-            </section>
-        </header>
+      <main>
+        <section class="products">
+          <div class="products-row">
+            <div class="products-row-info">
+              <h2 class="products-row-title">春季特價</h2>
+              <a href="./promo.html" class="products-row-more">查看全部</a>
+            </div>
+            <div id="promo-row" class="products-row-items"></div>
+          </div>
 
-        <main>
-            <section class="products">
-                <div class="products-row">                        
-                    <div class="products-row-info">
-                        <h2 class="products-row-title">春季特價</h2>
-                        <a href="./promo.html" class="products-row-more">查看全部</a>
-                    </div>
-                    <div id="promo-row" class="products-row-items"></div>
+          <div class="products-row">
+            <div class="products-row-info">
+              <h2 class="products-row-title">免費織圖</h2>
+              <a href="./free.html" class="products-row-more">查看全部</a>
+            </div>
+            <div id="free-row" class="products-row-items"></div>
+          </div>
+
+          <div class="products-row">
+            <div class="products-row-info">
+              <h2 class="products-row-title">娃娃織圖</h2>
+              <a href="./amigurumi.html" class="products-row-more">查看全部</a>
+            </div>
+            <div id="ami-row" class="products-row-items"></div>
+          </div>
+
+          <div class="products-row">
+            <div class="products-row-info">
+              <h2 class="products-row-title">包袋及服飾織圖</h2>
+              <a href="./bag.html" class="products-row-more">查看全部</a>
+            </div>
+            <div id="bag-row" class="products-row-items"></div>
+          </div>
+
+          <template id="template">
+            <div class="products-row-item">
+              <div class="products-row-item-top">
+                <a href="javascript:;"><img src="" alt="" /></a>
+                <div class="products-row-item-texts">
+                  <span class="item-name"></span>
+                  <span class="item-price"></span>
                 </div>
+              </div>
+              <button class="buy" data-id="">加入購物車</button>
+            </div>
+          </template>
+        </section>
 
-                <div class="products-row">                        
-                    <div class="products-row-info">
-                        <h2 class="products-row-title">免費織圖</h2>
-                        <a href="./free.html" class="products-row-more">查看全部</a>
-                    </div>
-                    <div id="free-row" class="products-row-items"></div>
-                </div>
-                
-                <div class="products-row">                        
-                    <div class="products-row-info">
-                        <h2 class="products-row-title">娃娃織圖</h2>
-                        <a href="./amigurumi.html" class="products-row-more">查看全部</a>
-                    </div>
-                    <div id="ami-row" class="products-row-items"></div>
-                </div>
-                
-                <div class="products-row">                        
-                    <div class="products-row-info">
-                        <h2 class="products-row-title">包袋及服飾織圖</h2>
-                        <a href="./bag.html" class="products-row-more">查看全部</a>
-                    </div>
-                    <div id="bag-row" class="products-row-items"></div>
-                </div>
-                
-                
-                <template id="template">
-                    <div class="products-row-item">
-                        <div class="products-row-item-top">
-                            <a href="javascript:;"><img src="" alt=""></a>
-                            <div class="products-row-item-texts">
-                                <span class="item-name"></span>
-                                <span class="item-price"></span>
-                            </div>
-                        </div>
-                        <button class="buy" data-id="">加入購物車</button>
-                    </div>
-                </template>
-            </section>
+        <section class="faq"></section>
 
-            <section class="faq">
-                
-            </section>
+        <section class="feed"></section>
+      </main>
 
-            <section class="feed">
-                
-            </section>
+      <footer></footer>
 
-            <!-- <section class="cart closed">  style="display: none;" 
-                <h2 class="cart-title">您的購物車</h2>
+      <div class="overlay"></div>
 
-                <div class="cart-items"></div>
-                <div class="cart-footer">
-                    <p>總計: <span id="cart-total">NT$0</span></p>
-                    <button class="checkout-btn">結帳</button>
-                </div>                
-
-            </section> -->
-        </main>
-
-        <footer>
-
-        </footer>
-        
-
-
-        <script type="module" src="./js/main.js"></script>
-        <script type="module" src="./js/index.js"></script>
+      <script type="module" src="./js/main.js"></script>
+      <script type="module" src="./js/index.js"></script>
     </div>
-
-
-</body>
+  </body>
 </html>
