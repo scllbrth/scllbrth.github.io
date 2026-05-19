@@ -115,10 +115,10 @@ select {
     /* !!!!!adjust for odd numbers later!!!!! */
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
     @media (max-width: 576px) {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
     & .no-results {
