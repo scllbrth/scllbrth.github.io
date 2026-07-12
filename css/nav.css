@@ -11,7 +11,7 @@ nav {
   top: 0;
   left: 0;
   z-index: 99;
-  box-shadow: 0 5px 10px var(--color-grey);
+  box-shadow: 0 5px 10px rgb(from var(--color-black) r g b / .5);
 
   h3 {
     font-size: var(--p);

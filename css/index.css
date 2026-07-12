@@ -3,12 +3,13 @@ header {
 }
 
 .hero {
+  position: relative;
   margin-top: var(--nav-height);
   height:
         /* calc(100dvh - var(--nav-height)); */
         /* 80dvh; */
         calc( 80dvh - var(--nav-height) );
-  background-color: var(--color-main);
+  background-color: var(--color-black);
   /* background-image: url(../images/crochet-header3.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,13 +18,61 @@ header {
     display: block;
     width: 100%;
     height: 100%;
+    opacity: 0.7;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+    }
   }
 
-  picture img {
-    display: block;
-    width: 100%;
+  .hero-content {
+    --font-size: calc(var(--h1) * 1.5);
+    position: absolute;
+    width: calc(var(--font-size * 6));
     height: 100%;
-    object-fit: cover;
+    top: 60%;
+    right: 10%;
+    bottom: auto;
+    transform: translateY(-50%);
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: .5rem;
+
+    @media (max-width: 400px) {
+      text-align: center;
+      align-items: center;
+      right: auto;
+    }
+
+    h1 {
+      color: var(--color-main-400);
+      font-size: var(--font-size);
+      text-shadow: 1px 1px 4px rgb(from var(--color-main-900) r g b / .7);
+    }
+
+    span {
+      font-size: calc(var(--h1) * 1.8);
+      /* vertical-align: -3%; */
+      color: color-mix(in oklch, var(--color-black) 60%, var(--color-main-900));
+    }
+
+    .hero-subtitle {
+      width: 80%;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      width: auto;
+      padding: 0.5rem 2rem;
+      box-shadow: 1px 1px 4px rgb(from var(--color-main-900) r g b / .7);
+    }
   }
 }
 
